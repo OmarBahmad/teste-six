@@ -1,0 +1,45 @@
+:root {
+  color-scheme: dark;
+  --pink: #FF2D78;
+  --pink-glow: rgba(255, 45, 120, 0.35);
+  --pink-soft: #ff6aa0;
+  --dark: #0a0a0a;
+  --dark-card: #141414;
+  --dark-surface: #1c1c1c;
+  --white: #ffffff;
+  --gray: #999;
+  --gray-light: #bbb;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--white);
+  background: var(--dark);
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}

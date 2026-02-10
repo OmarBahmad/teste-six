@@ -1,0 +1,100 @@
+.page {
+  min-height: 100vh;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  color: var(--white);
+}
+
+.card {
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 16px;
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  gap: 24px;
+  text-align: center;
+  justify-items: center;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--dark);
+  background: var(--pink);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.card h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.card p {
+  color: var(--gray);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  margin-top: 16px;
+}
+
+.steps div {
+  background: var(--dark-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  display: grid;
+  gap: 4px;
+}
+
+.steps div strong {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.steps span {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.cta {
+  background: var(--pink);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 16px 28px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  margin-top: 8px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 0 0 0 var(--pink-glow);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px var(--pink-glow);
+  }
+}
