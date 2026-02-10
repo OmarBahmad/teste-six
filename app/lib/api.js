@@ -1,25 +1,41 @@
-const BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  `http://localhost:${process.env.PORT || 3000}`;
-
-async function fetcher(path) {
-  const res = await fetch(`${BASE_URL}/api${path}`, { cache: "no-store" });
-  if (!res.ok) throw new Error(`API error: ${res.status} on ${path}`);
-  return res.json();
-}
+import { supabase } from './supabase';
 
 export async function getModules() {
-  return fetcher("/modules");
+  const { data, error } = await supabase
+    .from('modules')
+    .select('*')
+    .order('id', { ascending: true });
+  
+  if (error) throw error;
+  return data;
 }
 
 export async function getTestimonials() {
-  return fetcher("/testimonials");
+  const { data, error } = await supabase
+    .from('testimonials')
+    .select('*')
+    .order('id', { ascending: true });
+  
+  if (error) throw error;
+  return data;
 }
 
 export async function getMetrics() {
-  return fetcher("/metrics");
+  const { data, error } = await supabase
+    .from('metrics')
+    .select('*')
+    .single();
+  
+  if (error) throw error;
+  return data;
 }
 
 export async function getCheckoutData() {
-  return fetcher("/checkout");
+  const { data, error } = await supabase
+    .from('checkout')
+    .select('*')
+    .single();
+  
+  if (error) throw error;
+  return data;
 }
