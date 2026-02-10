@@ -1,5 +1,5 @@
 ﻿import styles from "./page.module.css";
-import { getModules, getTestimonials, getMetrics } from "./lib/api";
+import { modules, testimonials, metrics } from "./lib/data";
 import Navbar from "./components/Header";
 import Footer from "./components/Footer";
 import {
@@ -12,12 +12,7 @@ import {
   CtaBlockSection,
 } from "./components/sections";
 
-export default async function Home() {
-  const [modules, testimonials, metrics] = await Promise.all([
-    getModules(),
-    getTestimonials(),
-    getMetrics(),
-  ]);
+export default function Home() {
 
   return (
     <div className={styles.page}>
