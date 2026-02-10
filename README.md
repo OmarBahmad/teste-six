@@ -177,3 +177,7 @@ UTM parameters são capturados e preservados em:
 - `utm_term`
 
 Todos os links e CTAs propagam esses parâmetros automaticamente.
+
+## LightHouse 
+
+<img width="1799" height="834" alt="Captura de tela 2026-02-10 180540" src="https://github.com/user-attachments/assets/9f18cd0c-90ec-4c03-bdf0-995d38cc7ff7" />
